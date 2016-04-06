@@ -33,7 +33,7 @@ class AIPlayer():
             guess = list_of_key[guess-1]
 
             #prevent guesses from generating a negative number
-            if guess <= self.cur_sticks_in_game:
+            if guess < self.cur_sticks_in_game:
                 print("AI pulls {} stick(s) from the table"
                       .format(guess))
                 self.reserve_hat_number(guess)
@@ -67,15 +67,17 @@ class AIPlayer():
         for key in self.temp_dic:
             self.append_into_win_dict(key, self.temp_dic[key])
             #print("Inserting Hat {} and Ball {}".format(key, self.temp_dic[key]))
-            print("The AI has won and grown smarter")
+
             #print(self.win_dic)
+        print("The AI has won and grown smarter")
         self.sort_dict_values()
         return False
 
     def ai_lost(self):
-        print("AI has lost, but has grown smart")
+        print("AI has lost, but has grown smarter")
         for key in self.temp_dic:
             self.remove_from_win_dict(key, self.temp_dic[key])
+        self.store_win_dict()
         self.temp_dic.clear()
         return False
 

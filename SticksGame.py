@@ -24,14 +24,14 @@ class SticksGame():
                     self.player_state = 1
 
             elif self.sticks_count == 1 and self.player_state == 1:
-                self.game_run = self.winner(self.player_state)
-            elif self.sticks_count == 1 and self.player_state == 2:
-                self.game_run = self.winner(self.player_state)
-            elif self.sticks_count == 0 and self.player_state == 1:
                 self.player_state = 2
                 self.game_run = self.winner(self.player_state)
-            elif self.sticks_count == 0 and self.player_state == 2:
+            elif self.sticks_count == 1 and self.player_state == 2:
                 self.player_state = 1
+                self.game_run = self.winner(self.player_state)
+            elif self.sticks_count == 0 and self.player_state == 1:
+                self.game_run = self.winner(self.player_state)
+            elif self.sticks_count == 0 and self.player_state == 2:
                 self.game_run = self.winner(self.player_state)
             else:
                 raise UnknownGameState("A player entered too many")
