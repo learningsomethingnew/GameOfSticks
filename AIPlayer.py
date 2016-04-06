@@ -6,7 +6,7 @@ class AIPlayer():
 
     def __init__(self, a_num_of_sticks_in_game = 10):
         #init the unused dictionary
-        self.init_dic = {n: list(range(1,4)) for n in range(1,11)}
+        self.init_dic = {n: list(range(1,4)) for n in range(1,a_num_of_sticks_in_game)}
 
         #init the winning dictionary that we will use to manage
 

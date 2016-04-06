@@ -1,10 +1,11 @@
+from AIPlayer import AIPlayer
+class SticksGameAI():
 
-class SticksGame():
-
-    def __init__(self, a_max = 20):
+    def __init__(self, a_max = 10):
         self.sticks_count = a_max
         self.player_state = 1
         self.game_run = True
+        f = AIPlayer()
 
 
     def game_logic(self):

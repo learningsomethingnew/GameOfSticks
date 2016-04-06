@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d638b0b-69da-4c00-b05d-700e9982e6aa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AI_Player.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SticksGameAI.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/AI_Player.py" afterPath="$PROJECT_DIR$/AIPlayer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assignment" afterPath="$PROJECT_DIR$/Assignment" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SticksGame.py" afterPath="$PROJECT_DIR$/SticksGame.py" />
     </list>
     <ignored path="GameOfSticks.iws" />
@@ -31,8 +32,8 @@
           <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-157">
-                  <caret line="101" column="37" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
+                <state relative-caret-position="-285">
+                  <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
                   </folding>
@@ -40,10 +41,32 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Assignment" pinned="false" current-in-tab="true">
+          <file leaf-file-name="FileActions.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SupportClasses/FileActions.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="203">
+                  <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+                  <folding>
+                    <element signature="e#207#234#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SticksGameAI.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/SticksGameAI.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="105">
+                  <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Assignment" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Assignment">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="593">
+                <state relative-caret-position="638">
                   <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
                   <folding />
                 </state>
@@ -57,19 +80,21 @@
           <file leaf-file-name="SticksGame.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/SticksGame.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+                <state relative-caret-position="105">
+                  <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AI_Player.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/AI_Player.py">
+          <file leaf-file-name="AIPlayer.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/AIPlayer.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-                  <folding />
+                <state relative-caret-position="135">
+                  <caret line="8" column="85" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -100,10 +125,13 @@
         <option value="$PROJECT_DIR$/GameEngine/main1.py" />
         <option value="$PROJECT_DIR$/GameEngine/Main.py" />
         <option value="$PROJECT_DIR$/main1.py" />
-        <option value="$PROJECT_DIR$/Main.py" />
-        <option value="$PROJECT_DIR$/SticksGame.py" />
         <option value="$PROJECT_DIR$/Assignment" />
+        <option value="$PROJECT_DIR$/SupportClasses/FileActions.py" />
         <option value="$PROJECT_DIR$/AI_Player.py" />
+        <option value="$PROJECT_DIR$/SticksGame.py" />
+        <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/SticksGameAI.py" />
+        <option value="$PROJECT_DIR$/AIPlayer.py" />
       </list>
     </option>
   </component>
@@ -156,20 +184,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameOfSticks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameOfSticks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -179,12 +193,15 @@
     <property name="full.screen.before.presentation.mode" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/GameEngine" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.AI_Player">
+  <component name="RunManager" selected="Python.main1">
     <configuration default="false" name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -248,7 +265,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="GameOfSticks" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AI_Player.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AIPlayer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -395,10 +412,10 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.AI_Player" />
-        <item index="1" class="java.lang.String" itemvalue="Python.SticksGame" />
-        <item index="2" class="java.lang.String" itemvalue="Python.main1" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Main" />
+        <item index="2" class="java.lang.String" itemvalue="Python.AI_Player" />
+        <item index="3" class="java.lang.String" itemvalue="Python.SticksGame" />
       </list>
     </recent_temporary>
   </component>
@@ -420,7 +437,21 @@
       <option name="project" value="LOCAL" />
       <updated>1459892375963</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added the AI_Player class">
+      <created>1459903230565</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1459903230565</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Completed AI Class. Prepping main to incorp ai game mode.">
+      <created>1459911584565</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1459911584565</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -471,21 +502,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;SticksGame class solidifying&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;SticksGame class solidifying&quot;" />
+    <MESSAGE value="Added the AI_Player class" />
+    <MESSAGE value="Completed AI Class. Prepping main to incorp ai game mode." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed AI Class. Prepping main to incorp ai game mode." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SupportClasses/FileActions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="68" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GameEngine/GameLevels/MainMenu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -528,10 +553,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SupportClasses/FileActions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="e#207#234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-157">
-          <caret line="101" column="37" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
+        <state relative-caret-position="-285">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
@@ -540,25 +583,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SticksGame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment">
+    <entry file="file://$PROJECT_DIR$/SticksGameAI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AI_Player.py">
+    <entry file="file://$PROJECT_DIR$/AIPlayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="135">
+          <caret line="8" column="85" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
