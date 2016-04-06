@@ -1,6 +1,8 @@
 from sys import exit
 from os import system, name
 
+
+class Main():
 menu_banner = "*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^"
 menu_divider = "---------------------------------------------------"
 greeting = ["Welcome to Styx",
@@ -91,11 +93,6 @@ def print_current_game_state(a_pvp_state, a_sticks_count):
     print("There are %i sticks on the table" % a_sticks_count)
     print("Player %i: How many do you take? 1, 2, or 3?" % a_pvp_state)
 
-
-def remove_sticks(a_number):
-    sticks_count -= a_number
-    print(sticks_count)
-    return sticks_count
 
 
 def winner(a_pvp_state):

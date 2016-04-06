@@ -6,6 +6,7 @@ class SticksGame():
         self.player_state = 1
         self.game_run = True
 
+
     def game_logic(self):
 
         while self.game_run == True:

@@ -28,15 +28,17 @@ class FileActions():
     def create_dir(self):
         pass
 
+    def test_if_file_exists(a_file_name):
+        return path.isfile()
+
     """Save file with data in pickle format. Must pass the data to pickle"""
     def save_to_pickle_file(self, a_data, a_file_name):
         dump(a_data, open(a_file_name+".p", "wb"))
 
 
     """Open file with data from pickle format to original data"""
-    def retrieve_pickled_file(self):
-        #data =
-        pass
+    def retrieve_pickled_file(self, a_file_name):
+        return load(open(a_file_name+".p", "rb"))
 
 if __name__ == '__main__':
     f = FileActions()
