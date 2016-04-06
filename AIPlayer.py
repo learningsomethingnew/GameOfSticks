@@ -25,14 +25,26 @@ class AIPlayer():
 
     """Returns the guess as int"""
     def get_guess(self):
-        list_of_key = self.win_dic[self.cur_sticks_in_game]
-        print("The current sticks in game is %i" %self.cur_sticks_in_game)
-        guess = self.get_random_int(len(list_of_key))
-        print(guess)
-        guess = list_of_key[guess-1]
-        print("The guess is %i" %guess)
-        self.reserve_hat_number(guess)
-        return guess
+        get_guess_loop = True
+        while get_guess_loop == True:
+            list_of_key = self.win_dic[self.cur_sticks_in_game]
+            #print("The current sticks in game is %i" %self.cur_sticks_in_game)
+            guess = self.get_random_int(len(list_of_key))
+            guess = list_of_key[guess-1]
+
+            #prevent guesses from generating a negative number
+            if guess <= self.cur_sticks_in_game:
+                print("AI pulls {} stick(s) from the table"
+                      .format(guess))
+                self.reserve_hat_number(guess)
+                return guess
+                get_guess_loop = False
+            else:
+                continue
+
+
+            #print("AI pulls {} from the table".format(guess))
+
 
     """gets the current game stick count"""
     def get_cur_sticks(self):
@@ -47,29 +59,25 @@ class AIPlayer():
     to the correct hat in the win_dict"""
     def reserve_hat_number(self, a_guess_num):
         self.temp_dic[self.cur_sticks_in_game] = a_guess_num
-        print("AI guess = {}".format(a_guess_num))
-        print("Reserving Hat {} and Ball {}"
-              .format(self.cur_sticks_in_game, a_guess_num))
+        #print("AI guess = {}".format(a_guess_num))
+        #print("Reserving Hat {} and Ball {}".format(self.cur_sticks_in_game, a_guess_num))
 
 
     def ai_won(self):
         for key in self.temp_dic:
             self.append_into_win_dict(key, self.temp_dic[key])
-            print("Inserting Hat {} and Ball {}"
-                  .format(key, self.temp_dic[key]))
-            print("The AI Win_Dict is ")
-            print(self.win_dic)
+            #print("Inserting Hat {} and Ball {}".format(key, self.temp_dic[key]))
+            print("The AI has won and grown smarter")
+            #print(self.win_dic)
         self.sort_dict_values()
+        return False
 
     def ai_lost(self):
-        print("AI Has Lost")
+        print("AI has lost, but has grown smart")
         for key in self.temp_dic:
-            print("The WIN Dic is comprised of")
-            print(self.win_dic)
             self.remove_from_win_dict(key, self.temp_dic[key])
-        print("Clearing temp dic")
-        print(self.temp_dic)
         self.temp_dic.clear()
+        return False
 
     def store_win_dict(self):
         self.f.save_to_pickle_file(self.win_dic, "win_dic")
@@ -88,12 +96,12 @@ class AIPlayer():
     def sort_dict_values(self):
         for key in self.win_dic:
             self.win_dic[key].sort()
-        print("list sorted")
+        #print("list sorted")
 
     def test_file_exists(self, a_file_name):
         if path.isfile(a_file_name+".p"):
-            print("file exists. opening")
-            print()
+            #print("file exists. opening")
+            #print()
             return self.retrieve_win_dict()
         else:
 

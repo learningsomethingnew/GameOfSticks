@@ -1,5 +1,6 @@
 from sys import exit
 from os import system, name
+from time import sleep
 from SticksGame import SticksGame
 from SticksGameAI import SticksGameAI
 
@@ -19,7 +20,7 @@ class Main():
 
         self.rules = ["There is a pile of sticks on the table.",
                       "You can take 1-3 sticks per turn",
-                      "The one that has has one stick at the end looses",
+                      "The one that has no sticks at the end wins",
                       ]
 
         self.game_state = 0
@@ -36,32 +37,35 @@ class Main():
 
 
     def which_game_mode(self):
-        # Print greeting
-
-        self.clear_screen()
-
-        print(self.menu_banner)
-        print(self.menu_banner + '\n')
-        for sent in self.greeting:
-            print(sent)
-
-        print(self.menu_divider + '\n')
-
-        # print menu
-        for menu in self.main_menu:
-            print(menu)
-
-        # get users response
-        answer = int(self.get_user_response())
-        if answer == False:
-            self.user_quit()
-        elif answer == 1:
+        mainTrue = True
+        while mainTrue == True:
             self.clear_screen()
-            self.f.game_logic()
-        elif answer == 2:
-            self.clear_screen()
-            self.g.game_logic()
 
+            print(self.menu_banner)
+            print(self.menu_banner + '\n')
+            for sent in self.greeting:
+                print(sent)
+
+            print(self.menu_divider + '\n')
+
+            # print menu
+            for menu in self.main_menu:
+                print(menu)
+
+            # get users response
+            answer = self.get_user_response()
+            if answer == False:
+                self.user_quit()
+            elif answer == 'R' or answer == 'r':
+                for rule in self.rules:
+                    print(rule)
+                sleep(5)
+            elif int(answer) == 1:
+                self.clear_screen()
+                self.f.game_logic()
+            elif int(answer) == 2:
+                self.clear_screen()
+                self.g.game_logic()
 
 
     def user_quit(self):
