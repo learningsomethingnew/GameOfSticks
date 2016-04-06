@@ -55,3 +55,13 @@ Example 1:
     There is 1 stick on the board.
     Player 2: How many sticks do you take (1-3)? 1
     Player 2, you lose.
+
+ADVANCED
+An AI has a number of hats, one hat for each possible amount of sticks on the table. Initially, each hat contains three balls that are numbered from 1 to 3.
+
+At every step of the game that the AI plays, the AI takes a random ball out of the hat that matches the amount of sticks currently on the board. When the AI takes a ball out of a hat, it places it next to the hat for waiting, reads the number on the ball, and takes the amount of sticks that the ball indicates.
+
+If the AI wins the game, it puts two balls of the type to each hat that has a ball next to it. Both balls have the same number. If the AI loses, it will throw away the balls that are next to the hats (note: A hat must always have at least one ball of each number, hence the last ball of a specific number cannot be thrown away and must be put back to the hat).
+
+As more and more games are played, there will be more balls that indicate a good number of sticks to take. This means that as balls are taken at random, it becomes more likely that the AI is able to play well.
+

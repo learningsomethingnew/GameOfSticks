@@ -10,34 +10,30 @@ class SticksGame():
 
         while self.game_run == True:
             self.print_current_game_status(self.sticks_count, self.player_state)
-            if self.sticks_count > 1 and \
-                            self.player_state == 1 or \
-                            self.player_state == 2:
+            if self.sticks_count > 1 and self.player_state in {1,2}:
 
-                user_response = user_response()
+                user_response = self.test_user_input()
 
-
-                self.sticks_count -= answer
+                self.dec_sticks(user_response)
                 print(self.sticks_count)
 
-                if pvp_state == 1:
-                    pvp_state = 2
-                elif pvp_state == 2:
-                    pvp_state = 1
+                if self.player_state == 1:
+                    self.player_state = 2
+                elif self.player_state == 2:
+                    self.player_state = 1
 
-            elif self.sticks_count == 1 and pvp_state == 1:
-                winner(pvp_state)
-                game_run = False
-            elif self.sticks_count == 1 and pvp_state == 2:
-                winner(pvp_state)
-            elif self.sticks_count == 0 and pvp_state == 1:
-                pvp_state = 2
-                winner(pvp_state)
-            elif self.sticks_count == 0 and pvp_state == 2:
-                pvp_state = 1
-                winner(pvp_state)
+            elif self.sticks_count == 1 and self.player_state == 1:
+                self.game_run = self.winner(self.player_state)
+            elif self.sticks_count == 1 and self.player_state == 2:
+                self.game_run = self.winner(self.player_state)
+            elif self.sticks_count == 0 and self.player_state == 1:
+                self.player_state = 2
+                self.game_run = self.winner(self.player_state)
+            elif self.sticks_count == 0 and self.player_state == 2:
+                self.player_state = 1
+                self.game_run = self.winner(self.player_state)
             else:
-                pass
+                raise UnknownGameState("A game state was not built in")
 
     def print_current_game_status(self, a_stick_count, a_player_state):
         print("There are %i sticks on the table" % a_stick_count)
@@ -47,5 +43,22 @@ class SticksGame():
     def dec_sticks(self, a_num):
         self.sticks_count -= a_num
 
-    def user_input(self):
+    def test_user_input(self):
+        valid = True
+        while (True):
+            a_response = input(">>> ")
+            if a_response not in {1, 2, 3}:
+                return int(a_response)
+            else:
+                print("Please enter a valid response")
 
+    def winner(self, a_winning_player):
+        print("%s Wins!" %self.player_state)
+        return False
+
+class UnknownGameState(Exception):
+    pass
+
+if __name__ == '__main__':
+    f = SticksGame()
+    f.game_logic()
